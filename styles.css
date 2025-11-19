@@ -55,8 +55,8 @@ body {
 
 /* Logo */
 .logo-wrapper {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto 26px; /* ajusto un poquito el espacio */
   border-radius: 50%;
   overflow: hidden;
