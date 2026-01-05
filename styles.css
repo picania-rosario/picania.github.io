@@ -29,7 +29,6 @@ body {
   touch-action: manipulation;
 }
 
-
 /* Centrado de la card */
 .page {
   min-height: 100vh;
@@ -48,7 +47,7 @@ body {
   background: var(--accent-color);
   color: var(--text-main);
   border-radius: 5px;
-  padding: 28px 22px 28px;   /* podés volver a 100px si la querés más larga */
+  padding: 28px 22px 28px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
   text-align: center;
 }
@@ -57,7 +56,7 @@ body {
 .logo-wrapper {
   width: 160px;
   height: 160px;
-  margin: 0 auto 26px; /* ajusto un poquito el espacio */
+  margin: 0 auto 26px;
   border-radius: 50%;
   overflow: hidden;
   background: transparent;
@@ -65,7 +64,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 .logo {
   width: 100%;
@@ -90,7 +88,7 @@ body {
 /* Lista de links */
 .links {
   margin-top: 44px;
-  margin-bottom: 40px;      /* 🔥 empuja el footer hacia abajo */
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -131,7 +129,7 @@ body {
   color: #1b3059;
   vertical-align: middle;
   transform: translateY(-1px);
-  font-weight: 200;
+  font-weight: 200; /* mantiene líneas finas */
 }
 
 .link-button:hover .icon {
@@ -159,3 +157,54 @@ body {
   font-size: 0.75rem;
   color: rgba(27, 48, 89, 0.7);
 }
+
+/* =========================================================
+   ✅ SECCIÓN CORREGIDA: ICONO/LOGO PICAÑA + SWAP HOVER
+   (misma lógica que La Roti)
+   ========================================================= */
+
+.icon-wrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Botón marca (último) */
+.brand-button {
+  justify-content: center !important;
+  padding: 13px 0;
+}
+
+/* Contenedor fijo para evitar corrimientos */
+.swap-logo {
+  position: relative;
+  width: 96px;      /* ajusta ancho visual del logo */
+  height: 25px;     /* ajusta tamaño del logo */
+  margin: 0 auto;
+  display: block;
+}
+
+/* Dos imágenes superpuestas, centradas perfecto */
+.swap-logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+  display: block;
+}
+
+/* Estado inicial */
+.swap-logo .logo-default { opacity: 1; }
+.swap-logo .logo-hover { opacity: 0; }
+
+/* Hover */
+.brand-button:hover .logo-default { opacity: 0; }
+.brand-button:hover .logo-hover { opacity: 1; }
+
