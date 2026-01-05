@@ -181,7 +181,7 @@ body {
 /* Contenedor fijo para evitar corrimientos */
 .swap-logo {
   position: relative;
-  width: 145px;  /* lo ancho lo podés dejar grande */
+  width: 165px;  /* lo ancho lo podés dejar grande */
   height: 24px;  /* 🔥 clave: mismo alto que icon-wrapper */
   margin: 0 auto;
   display: block;
