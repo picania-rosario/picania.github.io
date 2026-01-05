@@ -175,14 +175,14 @@ body {
 /* Botón marca (último) */
 .brand-button {
   justify-content: center !important;
-  padding: 13px 0;
+  padding: 13px 16px;  /* igual que .link-button */
 }
 
 /* Contenedor fijo para evitar corrimientos */
 .swap-logo {
   position: relative;
-  width: 145px;   /* ← más ancho el logo */
-  height: 34px;   /* ← más alto el logo */    /* ajusta tamaño del logo */
+  width: 145px;  /* lo ancho lo podés dejar grande */
+  height: 24px;  /* 🔥 clave: mismo alto que icon-wrapper */
   margin: 0 auto;
   display: block;
 }
