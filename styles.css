@@ -201,4 +201,9 @@ body {
   }
 }
 
+.link-button {
+  height: 51.2px;          /* 🔥 igual a los otros botones */
+}
+
+
 
