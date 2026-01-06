@@ -1,6 +1,6 @@
 :root {
-  --bg-color: #1b3059;      /* Azul */
-  --accent-color: #fff7e3; /* Cremita */
+  --bg-color: #1b3059;        /* Azul */
+  --accent-color: #fff7e3;   /* Cremita */
   --text-main: #1b3059;
   --text-light: #fff7e3;
 }
@@ -14,7 +14,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
   touch-action: manipulation;
 }
@@ -24,10 +25,12 @@ body {
   min-height: 100vh;
   background: radial-gradient(circle at top, #2c477e, var(--bg-color));
   color: var(--text-light);
-  overflow-x: hidden;
+  overflow-x: hidden; /* bloquea scroll lateral */
+  overscroll-behavior: none;
+  touch-action: manipulation;
 }
 
-/* Centrado */
+/* Centrado de la card */
 .page {
   min-height: 100vh;
   display: flex;
@@ -36,6 +39,7 @@ body {
   padding: 24px;
   width: 100%;
   max-width: 100%;
+  overflow: hidden; /* evita arrastre */
 }
 
 .card {
@@ -56,6 +60,7 @@ body {
   margin: 0 auto 2px;
   border-radius: 50%;
   overflow: hidden;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,13 +73,20 @@ body {
 }
 
 /* Textos */
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-top: -6px;
+}
+
 .subtitle {
   margin-top: 6px;
   font-size: 0.92rem;
   color: rgba(27, 48, 89, 0.75);
 }
 
-/* Links */
+/* Lista de links */
 .links {
   margin-top: 44px;
   margin-bottom: 40px;
@@ -83,7 +95,7 @@ body {
   gap: 12px;
 }
 
-/* Botones normales */
+/* Botón/link */
 .link-button {
   display: flex;
   align-items: center;
@@ -112,7 +124,45 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* Iconos */
+.icon {
+  font-size: 28px;
+  margin-right: 14px;
+  color: #1b3059;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  font-weight: 200; /* mantiene líneas finas */
+}
+
+.link-button:hover .icon {
+  color: #fff7e3;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: 36px 22px 42px;
+    max-width: 94%;
+  }
+
+  .title {
+    font-size: 1.55rem;
+  }
+
+  .link-button {
+    padding: 12px 14px;
+  }
+}
+
+/* Footer */
+.footer {
+  font-size: 0.75rem;
+  color: rgba(27, 48, 89, 0.7);
+}
+
+/* =========================================================
+   ICONO / LOGO + SWAP HOVER
+   ========================================================= */
+
 .icon-wrapper {
   width: 24px;
   height: 24px;
@@ -122,39 +172,22 @@ body {
   flex-shrink: 0;
 }
 
-.icon {
-  font-size: 28px;
-  color: var(--bg-color);
-}
-
-.link-button:hover .icon {
-  color: var(--accent-color);
-}
-
-/* ===========================
-   🔵 BOTÓN MARCA (ÚLTIMO)
-   =========================== */
-
+/* Botón marca (último) */
 .brand-button {
   justify-content: center !important;
-  background: var(--bg-color);        /* AZUL por default */
-  border-color: var(--bg-color);
-  color: var(--accent-color);
+  padding: 13px 16px; /* igual que .link-button */
 }
 
-.brand-button:hover {
-  background: var(--accent-color);    /* CREMA en hover */
-  color: var(--bg-color);
-}
-
-/* Swap logos */
+/* Contenedor fijo para evitar corrimientos */
 .swap-logo {
   position: relative;
   width: 165px;
-  height: 24px;
+  height: 24px; /* mismo alto que icon-wrapper */
   margin: 0 auto;
+  display: block;
 }
 
+/* Dos imágenes superpuestas */
 .swap-logo img {
   position: absolute;
   top: 50%;
@@ -162,10 +195,12 @@ body {
   transform: translate(-50%, -50%);
   height: 100%;
   width: auto;
+  object-fit: contain;
   transition: opacity 0.25s ease;
+  display: block;
 }
 
-/* Default */
+/* Estado inicial */
 .swap-logo .logo-default {
   opacity: 1;
 }
@@ -174,7 +209,7 @@ body {
   opacity: 0;
 }
 
-/* Hover swap */
+/* Hover */
 .brand-button:hover .logo-default {
   opacity: 0;
 }
@@ -183,16 +218,3 @@ body {
   opacity: 1;
 }
 
-/* Footer */
-.footer {
-  font-size: 0.75rem;
-  color: rgba(27, 48, 89, 0.7);
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .card {
-    padding: 36px 22px 42px;
-    max-width: 94%;
-  }
-}
