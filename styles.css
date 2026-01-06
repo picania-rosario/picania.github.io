@@ -125,6 +125,7 @@ body {
 .icon {
   font-size: 28px;
   color: var(--bg-color);
+   font-weight: 300; /* 👈 AQUI: afina las líneas */
 }
 
 .link-button:hover .icon {
