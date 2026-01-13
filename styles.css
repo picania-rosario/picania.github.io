@@ -204,5 +204,8 @@ body {
   height: 51.2px;          /* 🔥 igual a los otros botones */
 }
 
+.horario {
+  margin-top: 8px;
+}
 
 
