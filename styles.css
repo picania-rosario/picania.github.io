@@ -208,4 +208,42 @@ body {
   margin-top: 24px;
 }
 
+.horario {
+  margin: 12px 0 24px;
+  text-align: center;
+}
 
+.horario-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.horario-title span {
+  flex: 1;
+  height: 1px;
+  background: #22396b;
+  opacity: .35;
+}
+
+.horario-title h2 {
+  margin: 0;
+  color: #22396b;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .25em;
+}
+
+.horario .subtitle {
+  margin: 0 0 16px;
+  color: #22396b;
+  line-height: 1.45;
+}
+
+.horario .subtitle strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
