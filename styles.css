@@ -236,9 +236,9 @@ body {
 }
 
 .horario .subtitle {
-  margin: 0 0 16px;
+  margin: 0 0 8px;
   color: #22396b;
-  line-height: 1.45;
+  line-height: 1.2;
 }
 
 .horario .subtitle strong {
