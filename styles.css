@@ -89,6 +89,7 @@ body {
   justify-content: flex-start;
   gap: 12px;
   width: 100%;
+  height: 51.2px;
   padding: 13px 16px;
   border-radius: 5px;
   border: 2px solid var(--bg-color);
@@ -127,7 +128,7 @@ body {
   color: var(--bg-color);
   vertical-align: middle;
   transform: translateY(-1px);
-  font-weight: 100; /* 👈 AQUI: afina las líneas */
+  font-weight: 100;
 }
 
 .link-button:hover .icon {
@@ -140,13 +141,13 @@ body {
 
 .brand-button {
   justify-content: center !important;
-  background: var(--bg-color);        /* AZUL por default */
+  background: var(--bg-color);
   border-color: var(--bg-color);
   color: var(--accent-color);
 }
 
 .brand-button:hover {
-  background: var(--accent-color);    /* CREMA en hover */
+  background: var(--accent-color);
   color: var(--bg-color);
 }
 
@@ -200,14 +201,7 @@ body {
   }
 }
 
-.link-button {
-  height: 51.2px;          /* 🔥 igual a los otros botones */
-}
-
-.horario {
-  margin-top: 24px;
-}
-
+/* Horarios */
 .horario {
   margin: 12px 0 24px;
   text-align: center;
@@ -217,7 +211,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .horario-title span {
@@ -236,14 +230,14 @@ body {
 }
 
 .horario .subtitle {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #22396b;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .horario .subtitle strong {
   display: block;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 2px;
+  margin-bottom: 0;
 }
